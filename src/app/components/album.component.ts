@@ -16,7 +16,7 @@ export class AlbumComponent implements OnInit {
   //---------------------------------------
   // Inputs / Outputs
   //---------------------------------------
-  @Output() onNewAlbum = new EventEmitter<Album>();
+  // @Output() onNewAlbum = new EventEmitter<Album>();
 
   //---------------------------------------
   // Initialization
@@ -29,7 +29,4 @@ export class AlbumComponent implements OnInit {
   //---------------------------------------
   // Functions / Methods
   //---------------------------------------
-  process($event: NgForm) {
-
-  }
 }
