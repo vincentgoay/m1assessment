@@ -1,1 +1,13 @@
-<app-album></app-album>
+<mat-toolbar color="primary">
+    <h1>Rolling Stone</h1>
+</mat-toolbar>
+
+
+<button mat-button fxLayoutAlign="space-around" (click)="openDialog()">Add Album</button>
+
+<div fxLayout="column" fxLayoutGap="4vh">
+    
+    <div id="album-list-container" fxLayoutGap="10vh">
+        <app-album [albums]="albums"></app-album>
+    </div>
+</div>

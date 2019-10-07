@@ -5,7 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { FormComponent } from './components/form.component';
 import { AlbumComponent } from './components/album.component';
+import { MaterialModule } from './material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { MAT_DIALOG_DEFAULT_OPTIONS } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -15,13 +18,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   ],
   imports: [
     BrowserModule,
-<<<<<<< HEAD
-    FormsModule
-=======
+    FormsModule,
+    MaterialModule,
     BrowserAnimationsModule
->>>>>>> master
   ],
-  providers: [],
+  entryComponents: [
+    FormComponent
+  ],
+  providers: [
+    { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: { hasBackdrop: true } }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

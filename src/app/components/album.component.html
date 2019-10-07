@@ -1,11 +1,25 @@
-<img src="https://api.buzzanglemusic.com/images/albums/10152075" alt="placeholder image" width="100px" height="100px">
-
-<div>
-    <h3>Hollywood's Bleeding</h3>
-    <p>Post Malone</p>
+<div *ngIf="albums.length <= 0">
+    <span>There is no album</span>
 </div>
+<div *ngIf="albums.length > 0">
+    <mat-list *ngFor="let album of albums, let i = index">
+        <mat-list-item>
+            <div id="album-container" fxLayout="row" fxLayoutAlign="space-between top">
+                <div class="album-detail" fxLayout="row" fxLayoutGap="4vw" fxLayoutAlign="start center">
+                    <img matLine matListAvatar src="{{ album.imageUrl }}">
 
-<div>
-    <!-- Angular Star Component -->
-    <p>Rating</p>
+                    <div>
+                        <h3 mat-line>{{ album.name }}</h3>
+                        <p mat-line>{{ album.artist }}</p>
+                    </div>
+                </div>
+
+                <div class="album-rating">
+                    <!-- Angular Star Component -->
+                    <!-- <star-rating [starType]="'star-rating.icons.svg'" [rating]="2.63"></star-rating> -->
+                    <p mat-line>{{ album.rating }}</p>
+                </div>
+            </div>
+        </mat-list-item>
+    </mat-list>
 </div>

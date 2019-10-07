@@ -1,6 +1,5 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { Album } from '../models';
+import { Component, OnInit, Input } from '@angular/core';
+import {Album} from '../models';
 
 @Component({
   selector: 'app-album',
@@ -12,6 +11,7 @@ export class AlbumComponent implements OnInit {
   //---------------------------------------
   // Properties
   //---------------------------------------
+  @Input() albums: Album[];
   
   //---------------------------------------
   // Inputs / Outputs
