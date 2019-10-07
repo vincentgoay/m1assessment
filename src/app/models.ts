@@ -3,4 +3,4 @@ export interface Album {
     artist: string,
     rating: number,
     imageUrl: string
-}
+};
