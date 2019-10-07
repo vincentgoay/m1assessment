@@ -24,7 +24,8 @@ export class AppComponent {
     dialogRef.afterClosed().subscribe(newAlbum => {
       console.log("Form Result: ", newAlbum);
 
-      this.albums.push(newAlbum);
+      if(newAlbum == null)
+        this.albums.push(newAlbum);
     });
   }
 

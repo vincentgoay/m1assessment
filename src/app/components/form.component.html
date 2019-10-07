@@ -1,14 +1,27 @@
 <h1 mat-dialog-title>Add New Album</h1>
 
+<div fxLayout="row" fxLayoutAlign="end">
+    <button mat-dialog-close>X</button>
+</div>
 <div mat-dialog-content>
-    <form #form="ngForm"> 
-        <input type="text" name="name" placeholder="Album Name" ngModel>
+    <form #form="ngForm" fxLayout="coloum">
+        <mat-form-field>
+            <input type="text" name="name" placeholder="Album Name" ngModel matInput>
+        </mat-form-field>
 
-        <input type="text" name="artist" placeholder="Artist Name" ngModel>
+        <mat-form-field>
+            <input type="text" name="artist" placeholder="Artist Name" ngModel matInput>
+        </mat-form-field>
 
-        <input type="range" name="rating" min=0 max="5" step="1" ngModel>
 
-        <input type="text" name="imageUrl" ngModel>
+        <mat-form-field>
+            <input type="range" name="rating" min=0 max="5" step="1" ngModel matInput>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input type="text" name="imageUrl" ngModel>
+        </mat-form-field>
+
     </form>
     <div mat-dialog-actions>
         <button type="reset">Clear</button>
