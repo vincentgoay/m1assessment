@@ -4,22 +4,22 @@
     <button mat-dialog-close>X</button>
 </div>
 <div mat-dialog-content>
-    <form #form="ngForm" fxLayout="coloum">
+    <form #form="ngForm" fxLayout="coloum" fxLayoutAlignment="Start">
         <mat-form-field>
-            <input type="text" name="name" placeholder="Album Name" ngModel matInput>
+            <input type="text" name="name" placeholder="Album Name" ngModel mat-input>
         </mat-form-field>
 
         <mat-form-field>
-            <input type="text" name="artist" placeholder="Artist Name" ngModel matInput>
+            <input type="text" name="artist" placeholder="Artist Name" ngModel mat-input>
         </mat-form-field>
 
 
         <mat-form-field>
-            <input type="range" name="rating" min=0 max="5" step="1" ngModel matInput>
+            <input type="range" name="rating" min=0 max="5" step="1" ngModel mat-input>
         </mat-form-field>
 
         <mat-form-field>
-            <input type="text" name="imageUrl" ngModel>
+            <input type="text" name="imageUrl" ngModel mat-input>
         </mat-form-field>
 
     </form>
